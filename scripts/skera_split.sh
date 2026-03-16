@@ -1,8 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=pbskera
 #SBATCH -n 24
-#SBATCH --partition=compute
-#SBATCH -w compute004
+#SBATCH --partition=gen-mk-compute-1
 #SBATCH --time=100:00:00
 #SBATCH --mem=64G
 #SBATCH --mail-type=all
