@@ -3,7 +3,7 @@
 #SBATCH -n 24
 #SBATCH --partition=gen-mk-compute-1
 #SBATCH --time=100:00:00
-#SBATCH --mem=64G
+#SBATCH --mem=128G
 #SBATCH --mail-type=all
 #SBATCH --output=/data2/lackey_lab/DownloadedSequenceData/austin/chick/logs/skera_split.%j.out
 #SBATCH --error=/data2/lackey_lab/DownloadedSequenceData/austin/chick/logs/skera_split.%j.err
@@ -13,7 +13,7 @@ cd /data2/lackey_lab/DownloadedSequenceData/austin/chick/data
 
 source /opt/ohpc/pub/Software/anaconda3/etc/profile.d/conda.sh
 
-conda activate ago
+conda activate isoseq
 
 for b in *.bam ; do
 	N=$(basename $b .bam) ;
