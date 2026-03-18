@@ -13,7 +13,7 @@ cd /data2/lackey_lab/DownloadedSequenceData/austin/chick/data/skera_split
 
 source /opt/ohpc/pub/Software/anaconda3/etc/profile.d/conda.sh
 
-conda activate ago
+conda activate isoseq
 
 for b in *.segmented.bam ; do
 	N=$(basename $b .segmented.bam) ;
