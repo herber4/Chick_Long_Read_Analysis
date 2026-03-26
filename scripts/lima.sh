@@ -19,10 +19,3 @@ for b in *.segmented.bam ; do
 	N=$(basename $b .segmented.bam) ;
 	lima $b ../../IsoSeq_v2_primers_12.fasta ../lima_out/${N}.lima.bam --isoseq -j 24 --peek-guess ;
 done
-
-cd ../lima_out
-
-for b in *IsoSeqX_3p.bam ; do
-	N=$(basename $b IsoSeqX_3p.bam) ;
-	isoseq refine -j 32 --require-polya $b ../../IsoSeq_v2_primers_12.fasta ../flnc/${N}.flnc.bam ;
-done
