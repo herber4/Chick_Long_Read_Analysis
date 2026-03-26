@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=gg_index
+#SBATCH --job-name=gg_map
 #SBATCH -n 32
 #SBATCH --partition=bigmem
 #SBATCH --time=100:00:00
@@ -15,4 +15,4 @@ source /opt/ohpc/pub/Software/anaconda3/etc/profile.d/conda.sh
 
 conda activate isoseq
 
-pbmm2 align -j 32 --preset ISOSEQ --sort ../../ref/Gallus_gallus.bGalGal1.mat.broiler.GRCg7b.dna.toplevel.mmi clustered.bam ../mapped/mapped_reads_all_samples.bam
+pbmm2 align -j 32 --preset ISOSEQ --sort ../../ref/galGal6.fa clustered.bam ../mapped/mapped_reads_all_samples.bam
