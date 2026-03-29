@@ -8,4 +8,6 @@ cd sqanti3
 conda env create -f SQANTI3.conda_env.yml
 y
 conda activate sqanti3
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+python ../../bin/sqanti3/sqanti3_qc.py --help
 ```
